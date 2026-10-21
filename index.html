@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="Moustafa &amp; Dana">
+<meta property="og:description" content="Tuesday 29 December 2026 · Kasr Fakhreddine, Saifi, Beirut">
+<meta property="og:image" content="https://moustafaabiad.github.io/assets/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="theme-color" content="#E0CDA8">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<title>Moustafa & Dana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600;700&family=Cinzel+Decorative&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&display=swap">
+<style>
+/* Layout: one paper column (max 540px) on a sandstone wall; cover = the card artwork, inside = the invitation and the reply form */
+:root{
+  --paper:#F6F0E4; --paper-2:#ECE3D2; --stone:#E3D4B7; --stone-2:#D9C198;
+  --olive:#4C5A3C; --olive-dk:#3D4A30; --sage:#8A9470; --sage-dk:#6F7C57;
+  --bordeaux:#6B1E2B; --ink:#5B4A37; --line:rgba(76,90,60,.35);
+  --f-script:'Great Vibes','Brush Script MT',cursive;
+  --f-caps:'Cinzel','Trajan Pro',Georgia,serif;
+  --f-body:'Cormorant Garamond','Cormorant',Georgia,'Times New Roman',serif;
+  --f-amp:'Cinzel Decorative','Cinzel',Georgia,serif;
+  --f-ar:'Amiri','Scheherazade New','Traditional Arabic','Noto Naskh Arabic',serif;
+  /* the card's displayed width: the whole 4:5 artwork fits the first screen; the stone wall, the paper column and the
+     keystone monogram all scale from it, so stones are the same size everywhere */
+  color-scheme: light;
+}
+body{--art-w:max(min(100vw, 360px), min(100vw, 80vh, 820px));--art-w:max(min(100vw, 360px), min(100vw, 80svh, 820px))}
+/* inside, the arch is drawn a little larger than the screen on phones (the wall stays visible beside the jambs) */
+body.in{--art-w:min(112vw, 820px)}
+*{box-sizing:border-box}
+html,body{height:100%}
+/* the wall: one seamless ashlar tile (1200×824 card units) drawn by the card's own stone generator, scaled with the card */
+body{margin:0;background:#E0CDA8 url("assets/wall.jpg") center top/calc(var(--art-w) * 1.11111) calc(var(--art-w) * .76296) repeat;color:var(--olive-dk);font-family:var(--f-body);font-size:18px;line-height:1.45;-webkit-font-smoothing:antialiased}
+a{color:var(--olive-dk)}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--sage-dk);outline-offset:3px}
+img{max-width:100%;display:block}
+[hidden]{display:none!important}
+.shell{position:relative;overflow:hidden}
+
+/* ---------- Cover ---------- */
+/* The whole card (transparent outside the arch) sits on the wall; nothing is cropped at any screen size */
+.cover{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;padding-block:0}
+.cover .artbox{position:relative;width:var(--art-w);aspect-ratio:1080/1350;container-type:inline-size;flex:0 0 auto}
+.cover .art{width:100%;height:100%;display:block}
+.cover .ov{position:absolute;left:0;right:0;text-align:center;pointer-events:none}
+.cover .names{top:51%}
+.cover .names .n{font-family:var(--f-script);color:var(--olive);font-size:clamp(30px,8.6cqw,48px);line-height:.95;display:block}
+.cover .names .and{font-family:var(--f-amp);color:var(--sage-dk);font-size:clamp(11px,2.9cqw,16px);display:block;margin:.5em 0 .35em;line-height:1}
+.cover .choose{top:80%;pointer-events:auto;padding:0 max(16px,env(safe-area-inset-left,0px)) 0 max(16px,env(safe-area-inset-right,0px))}
+/* on a phone the whole card is only ~490px tall, so the language chooser moves just under the sill, on the wall */
+@container (max-width:560px){ .cover .choose{top:calc(100% + 18px)} .cover .lang{flex-basis:40%} }
+@media (max-width:560px){ .cover .artbox{margin-top:-110px} }
+.cover .choose .lbl{font-family:var(--f-caps);font-weight:600;text-transform:uppercase;letter-spacing:.2em;font-size:clamp(9px,2.1cqw,12px);line-height:1.7;color:var(--olive-dk);margin:0 0 .8em}
+.cover .choose .lbl .ar{font-family:var(--f-ar);font-weight:400;text-transform:none;letter-spacing:0;font-size:1.25em;display:block}
+.langs{display:flex;gap:4%;justify-content:center;align-items:stretch}
+/* Both labels measured to the same stroke weight (Cinzel 600 ≈ Amiri 400 at these sizes) and the same optical centre (ink centres within ±0.7px) */
+.lang{display:inline-flex;align-items:center;justify-content:center;flex:0 1 31%;min-height:clamp(34px,8.6cqw,46px);padding:.2em 1em 0;line-height:1;border:1px solid var(--olive);border-radius:999px;background:rgba(246,240,228,.72);backdrop-filter:blur(2px);font-family:var(--f-caps);font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:clamp(10px,2.5cqw,14px);color:var(--olive-dk);transition:background .2s,color .2s}
+.lang.ar{font-family:var(--f-ar);font-weight:400;letter-spacing:0;text-transform:none;font-size:clamp(12.5px,3.1cqw,17px);padding-top:0}
+.lang:hover,.lang:active{background:var(--olive);color:var(--paper)}
+
+/* Keystone monogram: the card's own geometry (1080-wide canvas), scaled to the drawn artwork */
+.mg{position:absolute;left:0;top:0;width:1080px;height:220px;transform-origin:0 0;pointer-events:none;color:var(--olive-dk);font-feature-settings:"kern" 0}
+.mg-en{position:absolute;left:465px;top:99.5px;width:150px;text-align:center;line-height:1;white-space:nowrap;font-family:var(--f-script)}
+.mg-en .m{font-size:36px;position:relative;top:-15px;left:4px}
+.mg-en .a{font-size:22px;position:relative;top:2px;left:-2px;margin:0 2px;color:var(--sage-dk)}
+.mg-en .d{font-size:36px;position:relative;top:17px;left:-9px}
+.mg-ar{position:absolute;left:0;top:0;width:1080px;height:220px;font-family:var(--f-ar);font-feature-settings:"rlig" 0,"kern" 0}
+.mg-ar span{position:absolute;line-height:1}
+.mg-ar .m{left:557.5px;top:58.5px;font-size:54.12px}
+.mg-ar .w{left:540.5px;top:104.5px;font-size:31.88px;color:var(--sage-dk)}
+.mg-ar .d{left:507px;top:94px;font-size:75.48px}
+.rtl .cover .mono{font-family:var(--f-ar)}
+
+/* ---------- Inside: a taller version of the same arch ----------
+   head = the card's top 780 units (keystone, voussoirs, the house), body = a 448-unit slice of the jambs that repeats
+   exactly (stones, jasmine and lattice are drawn periodic), foot = the last 122 units (jamb ends, sill). The text sits
+   inside the opening. JS snaps the body height to whole repeats so the sill always meets the jambs on a stone joint. */
+.inside{display:flex;justify-content:center;overflow:hidden}
+.tall{flex:0 0 var(--art-w);width:var(--art-w);position:relative}
+.t-head{position:relative;height:calc(var(--art-w) * .72222);overflow:hidden}
+.t-head img,.t-foot img{width:100%;height:auto;display:block}
+.t-body{display:flex;flex-direction:column;background:url("assets/band.png") center top/100% auto repeat-y}
+.webp .t-body{background-image:url("assets/band.webp")}
+.t-foot{height:calc(var(--art-w) * .11296);overflow:hidden}
+.t-foot img{margin-top:calc(var(--art-w) * -1.13704)}
+.paper{container-type:inline-size;position:relative;flex:1 1 auto;display:flex;flex-direction:column;margin-top:calc(var(--art-w) * -.04);padding-block:0 calc(var(--art-w) * .02 + 12px);
+  padding-left:calc(var(--art-w) * .13889);padding-right:calc(var(--art-w) * .13889);text-align:center}   /* content box = the 780-unit opening, so 1cqw = 7.8 card units */
+.sheet{--slack:0px;flex:1 1 auto;display:flex;flex-direction:column;padding-inline:12px;min-width:0}
+.sheet .divider{margin-top:calc(26px + 3cqw + var(--slack) * .3)}
+.sheet .rsvp{margin-top:calc(var(--slack) * .3)}
+.sheet footer{margin-top:calc(28px + var(--slack) * .4)}
+.sheet > *{position:relative}
+.greet{unicode-bidi:plaintext;font-style:italic;font-weight:500;font-size:1.35rem;color:var(--olive-dk);margin:6px 0 22px}
+.names{margin:0;font-weight:400;line-height:1}
+.names .n{font-family:var(--f-script);color:var(--olive);font-size:clamp(46px,14vw,74px);display:block}
+.names .and{font-family:var(--f-amp);color:var(--sage-dk);font-size:clamp(16px,5vw,26px);display:block;margin:.3em 0 .2em}
+.surnames{font-family:var(--f-caps);font-weight:700;text-transform:uppercase;letter-spacing:.36em;font-size:.72rem;color:var(--olive-dk);margin:14px 0 0;padding-left:.36em}
+.lead{font-size:1.25rem;margin:26px auto 0;max-width:30ch;line-height:1.4}
+.facts{margin:30px 0 0;display:grid;gap:7px;justify-items:center}
+.caps{font-family:var(--f-caps);font-weight:700;text-transform:uppercase;letter-spacing:.26em;font-size:.78rem;color:var(--olive-dk);margin:0;padding-left:.26em}
+.caps.big{font-weight:400;font-size:clamp(12.5px,3.4vw,1.05rem);letter-spacing:.14em;padding-left:.14em;white-space:nowrap}
+.caps.sub{font-weight:700;font-size:.68rem;letter-spacing:.3em;color:var(--sage-dk)}
+.gap{height:10px}
+.links{display:flex;flex-wrap:wrap;gap:8px 14px;justify-content:center;margin:12px 0 0}
+.pill{font-family:var(--f-caps);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:9px 14px 8px 16px;text-decoration:none;color:var(--olive-dk);background:rgba(255,255,255,.25)}
+.pill:hover{border-color:var(--olive);background:rgba(255,255,255,.5)}
+/* Divider: the card's own proportions, in card units (1cqw of .paper = 10.8 units of the 1080-wide card).
+   Lines from ±236 to ±106, cushions at ±98 (9.5 wide), rose 200 wide centred on the line, the couple 150 tall with the
+   hem's left edge at the line's left end and the feet on the line — exactly as drawn on the cover. */
+.divider{position:relative;width:60.51cqw;height:19.23cqw;margin:calc(26px + 3cqw) auto calc(24px + 9.2cqw)}   /* the rose hangs 9cqw below the line */
+.divider .ln{position:absolute;bottom:0;height:1px;width:16.67cqw;background:var(--line)}
+.divider .ln.l{left:0}.divider .ln.r{right:0}
+.divider .ln::after{content:"";position:absolute;top:50%;width:max(7px,1.218cqw);height:max(5.6px,.974cqw);transform:translateY(-50%);background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='11.6' viewBox='0 0 14 11.6'><path d='M13,5.8 L12.97,7.14 L12.87,7.86 L12.71,8.43 L12.48,8.91 L12.19,9.32 L11.83,9.67 L11.4,9.95 L10.89,10.19 L10.29,10.37 L9.58,10.5 L8.68,10.57 L7,10.6 L5.32,10.57 L4.42,10.5 L3.71,10.37 L3.11,10.19 L2.6,9.95 L2.17,9.67 L1.81,9.32 L1.52,8.91 L1.29,8.43 L1.13,7.86 L1.03,7.14 L1,5.8 L1.03,4.46 L1.13,3.74 L1.29,3.17 L1.52,2.69 L1.81,2.28 L2.17,1.93 L2.6,1.65 L3.11,1.41 L3.71,1.23 L4.42,1.1 L5.32,1.03 L7,1 L8.68,1.03 L9.58,1.1 L10.29,1.23 L10.89,1.41 L11.4,1.65 L11.83,1.93 L12.19,2.28 L12.48,2.69 L12.71,3.17 L12.87,3.74 L12.97,4.46 Z' fill='%23F6F0E4' stroke='%234C5A3C' stroke-width='0.9'/></svg>") no-repeat center/contain}
+.divider .ln.l::after{left:calc(100% + .417cqw)}.divider .ln.r::after{right:calc(100% + .417cqw)}
+.divider .rose{position:absolute;left:50%;bottom:0;width:25.64cqw;height:auto;transform:translate(-50%,51%)}
+.divider .dancers{position:absolute;left:-.25cqw;bottom:-.5px;height:19.23cqw;width:auto}
+
+/* ---------- RSVP ---------- */
+.rsvp{margin:0;text-align:center}
+.rsvp h2{font-family:var(--f-caps);font-weight:400;text-transform:uppercase;letter-spacing:.3em;font-size:.82rem;color:var(--olive-dk);margin:0;padding-left:.3em}
+.rsvp .by{font-style:italic;font-size:1.1rem;margin:8px 0 0;color:var(--sage-dk)}
+.rsvp .seats{font-size:1.15rem;margin:18px 0 0;color:var(--olive-dk)}
+.q{font-size:1.2rem;margin:26px 0 12px;color:var(--olive-dk)}
+.opts{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.opt{flex:1 1 150px;max-width:220px;min-height:48px;border:1px solid var(--olive);border-radius:999px;font-family:var(--f-caps);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--olive-dk);background:rgba(255,255,255,.35);padding:12px 14px 11px 16px;transition:background .2s,color .2s,transform .1s}
+.opt[aria-pressed="true"]{background:var(--olive);color:var(--paper)}
+.opt.small{flex:0 1 110px;min-height:44px}
+/* one row per invited person: name, then With pleasure / Regretfully */
+.who{margin:6px auto 0;max-width:470px;text-align:start}
+.person{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 14px;padding:13px 0;border-top:1px solid var(--line)}
+.person:last-child{border-bottom:1px solid var(--line)}
+.pname{font-size:1.3rem;font-weight:500;font-style:italic;color:var(--olive-dk);flex:1 1 110px;min-width:0;unicode-bidi:plaintext}
+.seg{display:flex;gap:8px;flex:0 0 auto;margin-inline-start:auto}
+.seg .opt{flex:0 0 auto;min-width:0;max-width:none;min-height:40px;font-size:.6rem;letter-spacing:.18em;padding:10px 12px 9px 14px}
+.person .pn{flex:1 1 100%;margin:4px 0 0;max-width:none}
+.person .pn input{padding:9px 12px;font-size:1rem}
+.rtl .pname{font-family:var(--f-ar);font-style:normal;font-size:1.3rem}
+.rtl .seg .opt{font-size:.95rem;padding:6px 14px 9px;line-height:1.4}
+.field{margin:18px auto 0;max-width:360px;text-align:start}
+.field label{display:block;font-family:var(--f-caps);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sage-dk);margin:0 0 6px 2px;unicode-bidi:plaintext}
+.field input,.field textarea{width:100%;font:inherit;font-size:1.05rem;color:var(--olive-dk);background:rgba(255,255,255,.45);border:1px solid var(--line);border-radius:10px;padding:11px 13px}
+.field textarea{min-height:88px;resize:vertical}
+.send{margin:24px auto 0;display:block;min-width:220px;min-height:50px;border-radius:999px;background:var(--olive);color:var(--paper);font-family:var(--f-caps);letter-spacing:.24em;text-transform:uppercase;font-size:.74rem;padding:14px 26px 13px 30px}
+.send[disabled]{opacity:.6;cursor:default}
+.err{color:var(--bordeaux);font-style:italic;margin:12px 0 0}
+.thanks{margin:0}
+.thanks .big{font-family:var(--f-script);color:var(--olive);font-size:clamp(34px,10vw,52px);line-height:1;margin:0}
+.thanks p{font-size:1.2rem;margin:16px auto 0;max-width:32ch}
+.thanks .change{font-family:var(--f-caps);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;text-decoration:underline;text-underline-offset:4px;margin-top:18px;display:inline-block}
+footer{margin:28px 0 0;padding-top:0;display:flex;flex-direction:column;gap:10px;align-items:center}
+footer .sig{font-family:var(--f-script);color:var(--sage-dk);font-size:1.5rem;line-height:1}
+footer .meta{font-family:var(--f-caps);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--sage-dk)}
+.switch{font-family:var(--f-caps);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;text-decoration:underline;text-underline-offset:4px;color:var(--olive-dk)}
+.demo{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);background:rgba(61,74,48,.85);color:var(--paper);font-family:var(--f-caps);font-size:10px;letter-spacing:.2em;text-transform:uppercase;padding:6px 12px;border-radius:999px;z-index:5;pointer-events:none}
+
+/* ---------- Arabic ---------- */
+.rtl{direction:rtl}
+.rtl .greet,.rtl .lead,.rtl .q,.rtl .rsvp .by,.rtl .rsvp .seats,.rtl .thanks p,.rtl .field input,.rtl .field textarea,.rtl .err{font-family:var(--f-ar);font-style:normal}
+.rtl .greet{font-size:1.35rem}
+.rtl .lead{font-size:1.3rem;line-height:1.7}
+.rtl .names .n{font-family:var(--f-ar);font-size:clamp(40px,12vw,64px);line-height:1.25}
+.rtl .names .and{font-family:var(--f-ar);font-size:clamp(22px,6vw,30px);margin:.15em 0 .3em;line-height:1}
+.rtl .surnames,.rtl .caps,.rtl .pill,.rtl .opt,.rtl .send,.rtl .rsvp h2,.rtl .field label,.rtl .thanks .change,.rtl .switch,.rtl footer .meta{font-family:var(--f-ar);letter-spacing:0;text-transform:none;padding-left:0;padding-right:0}
+.rtl .surnames{font-size:1.05rem;font-weight:400;margin-top:8px}
+.rtl .caps{font-size:1.05rem;font-weight:400}
+.rtl .caps.big{font-size:1.3rem;font-weight:700}
+.rtl .caps.sub{font-size:.98rem;font-weight:400}
+.rtl .rsvp h2{font-size:1.2rem}
+.rtl .pill,.rtl .opt,.rtl .send{font-size:1rem}
+.rtl .pill{padding:6px 18px 9px;line-height:1.5}
+.rtl .opt{padding:10px 16px 13px}
+.rtl .send{padding:12px 30px 15px}
+.rtl .field label{font-size:.9rem}
+.rtl .thanks .big{font-family:var(--f-ar);font-size:clamp(30px,9vw,46px);line-height:1.3}
+.rtl .thanks .change,.rtl .switch,.rtl footer .meta{font-size:.95rem}
+.rtl footer .sig{font-family:var(--f-ar);font-size:1.4rem}
+@media (prefers-reduced-motion:no-preference){
+  .inside{animation:fade .5s ease both}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+
+
+<section class="cover" id="cover" aria-label="Moustafa and Dana">
+  <div class="artbox">
+    <picture>
+      <source srcset="assets/arch.webp" type="image/webp">
+      <img class="art" src="assets/arch.png" alt="Hand-drawn sandstone arch with the rooftop of Kasr Fakhreddine, jasmine vines, a dancing couple and a Bordeaux rose" width="1080" height="1350" fetchpriority="high">
+    </picture>
+    <div class="mg" id="mg-cover" aria-hidden="true"><div class="mg-en"><span class="m">M</span><span class="a">&amp;</span><span class="d">D</span></div></div>
+    <div class="ov names" aria-hidden="true"><span class="n">Moustafa</span><span class="and">&amp;</span><span class="n">Dana</span></div>
+    <div class="ov choose">
+      <p class="lbl">Please choose your language <span class="ar">الرجاء اختيار اللغة</span></p>
+      <div class="langs">
+        <button class="lang" type="button" data-lang="en" id="btn-en">English</button>
+        <button class="lang ar" type="button" data-lang="ar" id="btn-ar">العربية</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="shell" id="shell">
+
+  <!-- Inside: invitation + reply -->
+  <section class="inside" id="inside" hidden>
+   <div class="tall" id="tall">
+    <div class="t-head">
+      <picture>
+        <source srcset="assets/arch.webp" type="image/webp">
+        <img src="assets/arch.png" alt="" width="1080" height="1350">
+      </picture>
+      <div class="mg" id="mg-arch" aria-hidden="true"><div class="mg-en" id="mg-arch-en"><span class="m">M</span><span class="a">&amp;</span><span class="d">D</span></div><div class="mg-ar" id="mg-arch-ar" hidden><span class="m">م</span><span class="w">و</span><span class="d">د</span></div></div>
+    </div>
+    <div class="t-body" id="tbody">
+    <div class="paper">
+     <div class="sheet">
+      <p class="greet" id="greet"></p>
+      <h1 class="names" id="names"><span class="n" id="n1">Moustafa</span><span class="and" id="and">&amp;</span><span class="n" id="n2">Dana</span></h1>
+      <p class="surnames" id="surnames">Al Abiad · El Oueini</p>
+      <p class="lead" id="lead"></p>
+      <div class="facts">
+        <p class="caps big" id="f-date"></p>
+        <p class="caps" id="f-time"></p>
+        <div class="gap"></div>
+        <p class="caps" id="f-venue"></p>
+        <p class="caps sub" id="f-venue2"></p>
+        <div class="gap"></div>
+        <p class="caps" id="f-dress"></p>
+        <div class="links">
+          <a class="pill" id="l-maps" href="https://www.google.com/maps/search/?api=1&query=Kasr+Fakhreddine+Saifi+Beirut" target="_blank" rel="noopener"></a>
+          <a class="pill" id="l-cal" href="#" target="_blank" rel="noopener"></a>
+        </div>
+      </div>
+
+      <div class="divider" aria-hidden="true">
+        <img class="dancers" src="assets/dancers.png" alt="" width="208" height="320">
+        <span class="ln l"></span><img class="rose" src="assets/rose.png" alt="" width="420" height="287"><span class="ln r"></span>
+      </div>
+
+      <section class="rsvp" id="rsvp" aria-labelledby="rsvp-h">
+        <h2 id="rsvp-h"></h2>
+        <p class="by" id="rsvp-by"></p>
+        <p class="seats" id="rsvp-seats" hidden></p>
+        <div id="form">
+          <div class="field" id="fld-name" hidden>
+            <label for="in-name" id="lbl-name"></label>
+            <input id="in-name" type="text" autocomplete="name" maxlength="80">
+          </div>
+          <p class="q" id="q-att"></p>
+          <div class="who" id="who" role="group" aria-labelledby="q-att"></div>
+          <div class="field" id="fld-msg">
+            <label for="in-msg" id="lbl-msg"></label>
+            <textarea id="in-msg" maxlength="500"></textarea>
+          </div>
+          <button type="button" class="send" id="send" disabled></button>
+          <p class="err" id="err" hidden></p>
+        </div>
+        <div class="thanks" id="thanks" hidden>
+          <p class="big" id="thanks-big"></p>
+          <p id="thanks-txt"></p>
+          <button type="button" class="change" id="change"></button>
+        </div>
+      </section>
+
+      <footer>
+        <div class="sig" id="sig">Moustafa &amp; Dana</div>
+        <div class="meta" id="meta"></div>
+        <button type="button" class="switch" id="switch"></button>
+      </footer>
+     </div>
+    </div>
+    </div>
+    <div class="t-foot" aria-hidden="true">
+      <picture>
+        <source srcset="assets/arch.webp" type="image/webp">
+        <img src="assets/arch.png" alt="" width="1080" height="1350">
+      </picture>
+    </div>
+   </div>
+  </section>
+</div>
+<div class="demo" id="demo" hidden>Preview</div>
+
+<script>
+/* ===================== CONFIG (filled in at go-live) ===================== */
+const CONFIG = {
+  guestsCsv: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQlg5Wm0QzeyJ9S_AdVEdeKYhWQoW8ExZGOjCLPlCvF1OaC4o0cXx5hJzQymNHEypgL4brusa_5C_Nc/pub?gid=609249100&single=true&output=csv",   // the Guests tab, published to the web as CSV: edits in the sheet are live; the embedded copy below is the fallback
+  formId: "1FAIpQLSduwyvbTsNoVySYdxsCdnYQQKluvGW7exAPkFsHYv8grSSx_A",                  // set at go-live: the published form's responder id (…/forms/d/e/<formId>/formResponse)
+  entries: { id:"entry.455962464", name:"entry.1358260306", attending:"entry.1275450610", seats:"entry.1623008452", plusName:"entry.620440869", message:"entry.2047381341", lang:"entry.1956189908" },
+  rsvpBy: { en: "29 November 2026", ar: "٢٩ تشرين الثاني ٢٠٢٦" },
+};
+/* Preview data – replaced by the live Google Sheet at go-live */
+const GUESTS_FALLBACK = [{"id":"moustafa-al-abiad","invite":"Moustafa Al Abiad","group":"Family","people":[{"first":"Moustafa","firstAr":"مصطفى","gender":"M"}],"open":0},{"id":"saadallah-al-abiad","invite":"Saadallah & May Al Abiad","group":"Family","people":[{"first":"Saadallah","firstAr":"سعد الله","gender":"M"},{"first":"May","firstAr":"مي","gender":""}],"open":0},{"id":"moustafa-al-abiad-2","invite":"Moustafa & Maha Al Abiad","group":"Family","people":[{"first":"Moustafa","firstAr":"مصطفى","gender":"M"},{"first":"Maha","firstAr":"مها","gender":""}],"open":0},{"id":"sawsan-itani","invite":"Sawsan & Maher Itani","group":"Family","people":[{"first":"Sawsan","firstAr":"سوسن","gender":"F"},{"first":"Maher","firstAr":"ماهر","gender":""}],"open":0},{"id":"abdelkader-itani","invite":"Abdelkader & Yasmina Itani","group":"Family","people":[{"first":"Abdelkader","firstAr":"عبد القادر","gender":"M"},{"first":"Yasmina","firstAr":"ياسمينا","gender":""}],"open":0},{"id":"amer-itani","invite":"Amer & Hania Itani","group":"Family","people":[{"first":"Amer","firstAr":"عامر","gender":"M"},{"first":"Hania","firstAr":"هانيا","gender":""}],"open":0},{"id":"leen-fleifel","invite":"Leen & Khodor Fleifel","group":"Family","people":[{"first":"Leen","firstAr":"لين","gender":"F"},{"first":"Khodor","firstAr":"خضر","gender":""}],"open":0},{"id":"samar-dabbous","invite":"Samar & Bassel Dabbous","group":"Family","people":[{"first":"Samar","firstAr":"سمر","gender":"F"},{"first":"Bassel","firstAr":"باسل","gender":""}],"open":0},{"id":"mohammad-dabbous","invite":"Mohammad Dabbous","group":"Family","people":[{"first":"Mohammad","firstAr":"محمد","gender":"M"}],"open":0},{"id":"aya-dabbous","invite":"Aya Dabbous","group":"Family","people":[{"first":"Aya","firstAr":"آية","gender":"F"}],"open":0},{"id":"karim-dabbous","invite":"Karim Dabbous","group":"Family","people":[{"first":"Karim","firstAr":"كريم","gender":"M"}],"open":0},{"id":"malek-al-abiad","invite":"Malek & Dalia Al Abiad","group":"Family","people":[{"first":"Malek","firstAr":"مالك","gender":"M"},{"first":"Dalia","firstAr":"داليا","gender":""}],"open":0},{"id":"bahaa-abiad","invite":"Bahaa Abiad","group":"Family","people":[{"first":"Bahaa","firstAr":"بهاء","gender":"M"}],"open":0},{"id":"karen-abiad","invite":"Karen Abiad","group":"Family","people":[{"first":"Karen","firstAr":"كارن","gender":"F"}],"open":0},{"id":"july-abiad","invite":"July Abiad","group":"Family","people":[{"first":"July","firstAr":"جولي","gender":"F"}],"open":0},{"id":"maha-abiad","invite":"Maha Abiad","group":"Family","people":[{"first":"Maha","firstAr":"مها","gender":"F"}],"open":0},{"id":"omar-al-abiad","invite":"Omar Al Abiad","group":"Family","people":[{"first":"Omar","firstAr":"عمر","gender":"M"}],"open":0},{"id":"loulwa-al-abiad","invite":"Loulwa Al Abiad","group":"Family","people":[{"first":"Loulwa","firstAr":"لولوة","gender":"F"}],"open":0},{"id":"amer-tannir","invite":"Amer Tannir","group":"Family","people":[{"first":"Amer","firstAr":"عامر","gender":"M"}],"open":0},{"id":"mohammad-chehab","invite":"Mohammad & Dania Chehab","group":"Family friends","people":[{"first":"Mohammad","firstAr":"محمد","gender":"M"},{"first":"Dania","firstAr":"دانيا","gender":""}],"open":0},{"id":"amjad-kaissi","invite":"Amjad & Dania Kaissi","group":"Family friends","people":[{"first":"Amjad","firstAr":"أمجد","gender":"M"},{"first":"Dania","firstAr":"دانيا","gender":""}],"open":0},{"id":"johnny-mazraani","invite":"Johnny Mazraani","group":"Friends","people":[{"first":"Johnny","firstAr":"جوني","gender":"M"}],"open":0},{"id":"antoun-souhaid","invite":"Antoun Souhaid","group":"Friends","people":[{"first":"Antoun","firstAr":"أنطون","gender":"M"}],"open":0},{"id":"mohammad-yassine","invite":"Mohammad Yassine","group":"Friends","people":[{"first":"Mohammad","firstAr":"محمد","gender":"M"}],"open":0},{"id":"karim-hage","invite":"Karim Hage","group":"Friends","people":[{"first":"Karim","firstAr":"كريم","gender":"M"}],"open":0},{"id":"mohammad-zaidan","invite":"Mohammad Zaidan","group":"Friends","people":[{"first":"Mohammad","firstAr":"محمد","gender":"M"}],"open":0},{"id":"roula-al-boustani","invite":"Roula Al Boustani","group":"Friends","people":[{"first":"Roula","firstAr":"رولا","gender":"F"}],"open":0},{"id":"omar-daouk","invite":"Omar Daouk","group":"Friends","people":[{"first":"Omar","firstAr":"عمر","gender":"M"}],"open":1},{"id":"jad-gebran","invite":"Jad Gebran","group":"Friends","people":[{"first":"Jad","firstAr":"جاد","gender":"M"}],"open":0},{"id":"bechara-koyess","invite":"Bechara Koyess","group":"Friends","people":[{"first":"Bechara","firstAr":"بشارة","gender":"M"}],"open":0},{"id":"ali-hamade","invite":"Ali Hamade & Yasmina Hamadeh","group":"Friends","people":[{"first":"Ali","firstAr":"علي","gender":"M"},{"first":"Yasmina","firstAr":"ياسمينا","gender":""}],"open":0},{"id":"karim-tannir","invite":"Karim Tannir & Karine Daouk","group":"Friends","people":[{"first":"Karim","firstAr":"كريم","gender":"M"},{"first":"Karine","firstAr":"كارين","gender":""}],"open":0},{"id":"mosbah-halwani","invite":"Mosbah Halwani & Kim","group":"Friends","people":[{"first":"Mosbah","firstAr":"مصباح","gender":"M"},{"first":"Kim","firstAr":"كيم","gender":""}],"open":0},{"id":"yasmina-atallah","invite":"Yasmina Atallah & Fayez","group":"Friends","people":[{"first":"Yasmina","firstAr":"ياسمينا","gender":"F"},{"first":"Fayez","firstAr":"فايز","gender":""}],"open":0},{"id":"alaa-saad","invite":"Alaa & Dana Saad","group":"Friends","people":[{"first":"Alaa","firstAr":"علاء","gender":"M"},{"first":"Dana","firstAr":"دانا","gender":""}],"open":0},{"id":"nelly-stavro","invite":"Nelly Stavro","group":"Friends","people":[{"first":"Nelly","firstAr":"نيللي","gender":"F"}],"open":0},{"id":"jerome-kaikati","invite":"Jerome Kaikati","group":"Friends","people":[{"first":"Jerome","firstAr":"جيروم","gender":"M"}],"open":0}];
+
+const T = {
+  en: {
+    lead: "have the pleasure of inviting you to celebrate their engagement",
+    date: "Tuesday, 29 December 2026", time: "At 7:30 in the evening",
+    venue: "Kasr Fakhreddine", venue2: "Rooftop salon · Saifi, Beirut",
+    maps: "Open in Maps", cal: "Add to calendar", dress: "Formal attire",
+    rsvp: "R.S.V.P.", by: "Kindly reply by {d}",
+    seatsN: "We have reserved {n} seats in your name.", nums: ["","one","two","three","four","five","six"],
+    yourName: "Your name",
+    q: "Will you join us?", qWho: "Who will be joining us?", yes: "With pleasure", no: "Regretfully, no",
+    you: "You", yourGuest: "Your guest", guestN: "Guest {n}", aGuest: "A guest", pname: "Name (optional)",
+    msg: "A few words for Moustafa & Dana (optional)",
+    send: "Send reply", sending: "Sending…",
+    thanksYes: "Thank you", thanksYesTxt: "{g}, we look forward to celebrating with you on 29 December.", missOne: " We will miss {p}.",
+    thanksNo: "We will miss you", thanksNoTxt: "{g}, thank you for letting us know.",
+    change: "Change your reply", switchTo: "العربية",
+    meta: "Tuesday · 29 December 2026 · Beirut",
+    err: "Your reply could not be sent. Please try again, or send Moustafa a message.",
+    needName: "Please tell us your name.",
+    surnames: "Al Abiad · El Oueini", and: "&",
+  },
+  ar: {
+    lead: "يتشرّفان بدعوتكم لمشاركتهما فرحة خطوبتهما",
+    date: "يوم الثلاثاء ٢٩ كانون الأول ٢٠٢٦", time: "الساعة السابعة والنصف مساءً",
+    venue: "قصر فخر الدين", venue2: "صالة السطح · الصيفي، بيروت",
+    maps: "افتح الخريطة", cal: "أضف إلى التقويم", dress: "اللباس رسمي",
+    rsvp: "تأكيد الحضور", by: "يُرجى تأكيد الحضور قبل {d}",
+    seatsN: "حجزنا {n} باسمكم.", nums: ["","مقعداً واحداً","مقعدين","ثلاثة مقاعد","أربعة مقاعد","خمسة مقاعد","ستة مقاعد"],
+    yourName: "الاسم الكريم",
+    q: "هل ستشاركوننا الفرحة؟", qWho: "من سيشاركنا الفرحة؟", yes: "بكل سرور", no: "نعتذر عن الحضور",
+    you: "أنتم", yourGuest: "مرافقكم", guestN: "المرافق {n}", aGuest: "مرافق", pname: "الاسم – اختياري",
+    msg: "كلمة لمصطفى ودانا – اختياري",
+    send: "إرسال الرد", sending: "جارٍ الإرسال…",
+    thanksYes: "شكراً لكم", thanksYesTxt: "{g}، ننتظر بشوق الاحتفال معكم في ٢٩ كانون الأول.", missOne: " سنفتقد {p}.",
+    thanksNo: "سنفتقدكم", thanksNoTxt: "{g}، شكراً لإعلامنا.",
+    change: "تعديل الرد", switchTo: "English",
+    meta: "الثلاثاء · ٢٩ كانون الأول ٢٠٢٦ · بيروت",
+    err: "تعذّر إرسال الرد. يُرجى المحاولة مجدداً أو مراسلة مصطفى.",
+    needName: "يُرجى كتابة اسمكم.",
+    surnames: "الأبيض · العويني", and: "و",
+    n1: "مصطفى", n2: "دانا", sig: "مصطفى و دانا", mono: "م و د",
+  },
+};
+const $ = id => document.getElementById(id);
+const state = { lang: null, guest: null, answers: [], pnames: {}, sent: null };   // answers[i] per person on the invitation
+const params = new URLSearchParams(location.search);
+const token = (params.get("g") || (location.hash||"").slice(1) || "").trim().toLowerCase();
+const DEMO = !CONFIG.formId;
+if (DEMO) $("demo").hidden = false;
+
+/* ---------- guest lookup ---------- */
+function parseCSV(text){ const rows=[]; let row=[], cur="", q=false; for(let i=0;i<text.length;i++){ const c=text[i]; if(q){ if(c=='"'){ if(text[i+1]=='"'){cur+='"';i++;} else q=false; } else cur+=c; } else if(c=='"') q=true; else if(c==','){row.push(cur);cur="";} else if(c=='\n'){row.push(cur);rows.push(row);row=[];cur="";} else if(c!='\r') cur+=c; } if(cur.length||row.length){row.push(cur);rows.push(row);} return rows; }
+const slug = s => String(s||"").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+function guestFromRow(h, r){     // live-sheet row (Guests tab) → {id, invite, group, people:[{first, firstAr, gender}], open}
+  const g={}; h.forEach((k,i)=>g[k.trim().toLowerCase()]=(r[i]||"").trim());
+  const name = g["guest"]; if(!name) return null;
+  const first = g["first name (en)"] || name.split(" ")[0], firstAr = g["first name (ar)"] || "";
+  const people = [{ first, firstAr, gender: (g["gender"]||"M").toUpperCase().slice(0,1) }];
+  const plus = /^(yes|y|true|1)$/i.test(g["plus one"]||""), pf = g["plus-one first name (en)"]||"", pfa = g["plus-one first name (ar)"]||"", pfull = g["plus-one full name"]||"";
+  let open = 0, invite = name;
+  if(plus){
+    if(pf || pfa){
+      people.push({ first: pf || pfa, firstAr: pfa, gender: "" });
+      const sur = name.includes(" ") ? name.split(" ").slice(1).join(" ") : "", psur = pfull.includes(" ") ? pfull.split(" ").slice(1).join(" ") : "";
+      invite = (sur && psur === sur) ? `${first} & ${pf} ${sur}` : `${name} & ${pfull || pf}`;
+    } else open = 1;
+  }
+  return { id: g["id"] || slug(name), invite, group: g["group"]||"", people, open };
+}
+function parseGuests(text){        // whole Guests tab as CSV → guest objects; duplicate names get -2, -3 … like the sheet's ids
+  const rows = parseCSV(text).filter(r => r.some(x => x && x.trim()));
+  if(rows.length < 2) return [];
+  const hdr = rows[0], out = [], seen = {};
+  for(const r of rows.slice(1)){ const g = guestFromRow(hdr, r); if(!g) continue; if(seen[g.id]){ seen[g.id]++; g.id = `${g.id}-${seen[g.id]}`; } else seen[g.id] = 1; out.push(g); }
+  return out;
+}
+async function loadGuest(){
+  if(!token) return null;
+  if(CONFIG.guestsCsv){            // the guest list published to the web as CSV: edits in the sheet are live within minutes
+    try{
+      const res = await fetch(CONFIG.guestsCsv, {cache:"no-store"}); if(!res.ok) throw new Error(res.status);
+      const g = parseGuests(await res.text()).find(x => x.id === token); if(g) return g;
+    }catch(e){ /* fall through to the embedded list, then to the link's own names */ }
+  }
+  const g = GUESTS_FALLBACK.find(x=>x.id===token); if(g) return g;
+  if(params.get("n")){ const names = params.get("n").split(/\s*[,&]\s*/).filter(Boolean); return { id:token, invite:names.join(" & "), group:"", people:names.map(n=>({ first:n.split(" ")[0], firstAr:"", gender:"M" })), open: parseInt(params.get("p")||"0",10)||0 }; }
+  return null;
+}
+
+/* ---------- greeting ---------- */
+function firstNames(g, lang){ return g.people.map(p => lang==="ar" ? (p.firstAr || p.first) : p.first); }
+function listNames(names, lang){            // "A", "A & B", "A, B & C" / "أ", "أ وب", "أ وب وج"
+  if(lang==="ar") return names.join(" و");
+  if(names.length <= 1) return names.join("");
+  return names.slice(0, -1).join(", ") + " & " + names[names.length - 1];
+}
+function greeting(g, lang){
+  if(!g) return "";
+  const names = firstNames(g, lang);
+  if(lang==="en"){
+    const who = listNames(g.open ? names.concat([g.open > 1 ? "guests" : "guest"]) : names, "en");
+    return `Dear ${who},`;
+  }
+  if(names.length === 1 && !g.open){ const dear = g.people[0].gender==="F" ? "عزيزتنا" : "عزيزنا"; return `${dear} ${names[0]}،`; }
+  if(names.length === 1 && g.open){ const dear = g.people[0].gender==="F" ? "عزيزتنا" : "عزيزنا"; return `${dear} ${names[0]} ومن يرافقكم،`; }
+  return `الأعزاء ${listNames(names, "ar")}${g.open ? " ومن يرافقكم" : ""}،`;
+}
+function shortName(g, lang){
+  if(!g) return lang==="en" ? "dear friends" : "أعزاءنا";
+  return listNames(firstNames(g, lang), lang);
+}
+
+/* ---------- calendar ---------- */
+const ICS = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Moustafa & Dana//Engagement//EN","BEGIN:VEVENT","UID:engagement-moustafa-dana-20261229@abiad","DTSTAMP:20261021T000000Z","DTSTART:20261229T173000Z","DTEND:20261229T220000Z","SUMMARY:Engagement of Moustafa & Dana","LOCATION:Kasr Fakhreddine\\, Saifi\\, Beirut","DESCRIPTION:Tuesday 29 December 2026 at 7:30 PM\\, Kasr Fakhreddine (rooftop salon)\\, Saifi\\, Beirut. Formal attire.","END:VEVENT","END:VCALENDAR"].join("\r\n");
+const GCAL = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + encodeURIComponent("Engagement of Moustafa & Dana") + "&dates=20261229T173000Z/20261229T220000Z&location=" + encodeURIComponent("Kasr Fakhreddine, Saifi, Beirut") + "&details=" + encodeURIComponent("Tuesday 29 December 2026 at 7:30 PM, rooftop salon. Formal attire.");
+
+/* ---------- keystone monogram placement ---------- */
+function fitMono(img, mg){
+  const cw = img.clientWidth; if(!cw) return;
+  mg.style.transform = `scale(${(cw / 1080).toFixed(5)})`;           // the artwork is shown whole, at cw/1080 of the card
+}
+let snapping = false;
+function snapBand(){            // body height = whole number of band repeats (224 card units), so the sill always meets the jambs on a stone joint;
+  if(snapping) return;          // the spare height is spread over three gaps instead of piling up at the bottom
+  const tall = $("tall"), body = $("tbody"), sheet = document.querySelector(".sheet"); if(!tall || $("inside").hidden) return;
+  const per = tall.clientWidth * 224 / 1080; if(!per) return;
+  snapping = true;
+  sheet.style.setProperty("--slack", "0px");
+  const h = body.getBoundingClientRect().height;
+  const slack = Math.max(1, Math.ceil((h - 0.5) / per)) * per - h;
+  sheet.style.setProperty("--slack", slack.toFixed(2) + "px");
+  snapping = false;
+}
+function fitMonos(){
+  const cov = document.querySelector("#cover .art"); if(cov) fitMono(cov, $("mg-cover"));
+  const arch = document.querySelector("#inside .t-head img"); if(arch) fitMono(arch, $("mg-arch"));
+  snapBand();
+}
+window.addEventListener("resize", fitMonos); window.addEventListener("load", fitMonos); document.fonts && document.fonts.ready.then(fitMonos);
+document.querySelectorAll("#cover .art, #inside .t-head img").forEach(im => { im.addEventListener("load", fitMonos); if(window.ResizeObserver) new ResizeObserver(fitMonos).observe(im); });
+if(window.ResizeObserver){ const ro = new ResizeObserver(() => snapBand()); document.querySelectorAll(".sheet > *").forEach(el => ro.observe(el)); }
+(function(){ const c = document.createElement("canvas"); if(c.getContext && c.toDataURL("image/webp").indexOf("data:image/webp") === 0) document.documentElement.classList.add("webp"); })();
+fitMonos();
+
+/* ---------- render ---------- */
+function render(){
+  const lang = state.lang, t = T[lang], g = state.guest;
+  const shell = $("shell"); shell.classList.toggle("rtl", lang==="ar"); shell.setAttribute("dir", lang==="ar" ? "rtl" : "ltr"); shell.setAttribute("lang", lang);
+  $("greet").textContent = greeting(g, lang); $("greet").hidden = !g;
+  $("n1").textContent = lang==="ar" ? t.n1 : "Moustafa"; $("n2").textContent = lang==="ar" ? t.n2 : "Dana"; $("and").textContent = t.and;
+  $("mg-arch-en").hidden = lang==="ar"; $("mg-arch-ar").hidden = lang!=="ar"; fitMonos();
+  $("surnames").textContent = t.surnames; $("lead").textContent = t.lead;
+  $("f-date").textContent = t.date; $("f-time").textContent = t.time; $("f-venue").textContent = t.venue; $("f-venue2").textContent = t.venue2; $("f-dress").textContent = t.dress;
+  $("l-maps").textContent = t.maps; $("l-cal").textContent = t.cal;
+  const isApple = /iPhone|iPad|Macintosh/.test(navigator.userAgent);
+  $("l-cal").href = isApple ? "data:text/calendar;charset=utf-8," + encodeURIComponent(ICS) : GCAL;
+  if(isApple) $("l-cal").setAttribute("download","Moustafa-and-Dana.ics"); else $("l-cal").removeAttribute("download");
+  $("rsvp-h").textContent = t.rsvp; $("rsvp-by").textContent = t.by.replace("{d}", CONFIG.rsvpBy[lang]);
+  const nSeats = g ? g.people.length + (g.open||0) : 0;
+  $("rsvp-seats").textContent = t.seatsN.replace("{n}", t.nums[nSeats] || String(nSeats)); $("rsvp-seats").hidden = nSeats < 2;
+  $("fld-name").hidden = !!g; $("lbl-name").textContent = t.yourName;
+  $("q-att").textContent = people().length > 1 ? t.qWho : t.q;
+  renderWho();
+  $("lbl-msg").textContent = t.msg; $("send").textContent = t.send;
+  $("change").textContent = t.change; $("switch").textContent = t.switchTo; $("meta").textContent = t.meta;
+  $("sig").textContent = lang==="ar" ? t.sig : "Moustafa & Dana";
+  $("in-name").placeholder = ""; $("in-msg").placeholder = "";
+  updateForm();
+  if(state.sent) showThanks(state.sent);
+  requestAnimationFrame(snapBand);
+}
+/* the people on this invitation: [guest, plus-one?] with display names in the current language */
+function people(){
+  const g = state.guest, lang = state.lang, t = T[lang];
+  if(!g) return [{ label: t.you }, { label: t.aGuest, unnamed: true }];   // unknown link: they may bring someone
+  const out = firstNames(g, lang).map(n => ({ label: n }));
+  for(let k = 1; k <= (g.open||0); k++) out.push({ label: g.open > 1 ? t.guestN.replace("{n}", lang==="ar" ? String(k).replace(/\d/g, d => "٠١٢٣٤٥٦٧٨٩"[d]) : String(k)) : t.yourGuest, unnamed: true });
+  return out;
+}
+function renderWho(){
+  const t = T[state.lang], box = $("who"); box.innerHTML = "";
+  people().forEach((p, i) => {
+    const row = document.createElement("div"); row.className = "person";
+    const nm = document.createElement("span"); nm.className = "pname"; nm.textContent = p.label; row.appendChild(nm);
+    const seg = document.createElement("div"); seg.className = "seg";
+    [[true, t.yes], [false, t.no]].forEach(([v, label]) => {
+      const b = document.createElement("button"); b.type = "button"; b.className = "opt"; b.textContent = label;
+      b.setAttribute("aria-pressed", state.answers[i]===v); b.addEventListener("click", () => { state.answers[i] = v; updateForm(); });
+      seg.appendChild(b);
+    });
+    row.appendChild(seg);
+    if(p.unnamed){ const f = document.createElement("div"); f.className = "field pn"; f.hidden = true; const inp = document.createElement("input"); inp.type = "text"; inp.maxLength = 80; inp.placeholder = t.pname; inp.setAttribute("aria-label", t.pname); inp.dataset.i = i; if(state.pnames && state.pnames[i]) inp.value = state.pnames[i]; inp.addEventListener("input", () => { state.pnames = state.pnames || {}; state.pnames[i] = inp.value; }); f.appendChild(inp); row.appendChild(f); }
+    box.appendChild(row);
+  });
+  updateForm();
+}
+function updateForm(){
+  const ps = people();
+  document.querySelectorAll("#who .person").forEach((row, i) => {
+    const bs = row.querySelectorAll(".opt"); bs[0].setAttribute("aria-pressed", state.answers[i]===true); bs[1].setAttribute("aria-pressed", state.answers[i]===false);
+  });
+  document.querySelectorAll("#who .person .pn").forEach(f => { const i = +f.querySelector("input").dataset.i; f.hidden = state.answers[i]!==true; });
+  const ready = ps.every((p, i) => state.answers[i]!==null && state.answers[i]!==undefined);
+  $("send").disabled = !ready;
+}
+function showThanks(sent){
+  const t = T[state.lang], g = state.guest, ps = people();
+  const typed = $("in-name").value.trim().split(" ")[0];
+  const pn = i => ((state.pnames && state.pnames[i]) || "").trim().split(" ")[0];
+  const label = i => (i===0 && !g) ? (typed || ps[0].label) : (ps[i].unnamed ? (pn(i) || (state.lang==="en" ? ps[i].label.toLowerCase() : ps[i].label)) : ps[i].label);
+  const yes = ps.map((p, i) => i).filter(i => sent.answers[i]===true), no = ps.map((p, i) => i).filter(i => sent.answers[i]===false);
+  const join = ids => ids.map(label).join(state.lang==="ar" ? " و" : " & ");
+  $("form").hidden = true; $("thanks").hidden = false;
+  const anyone = yes.length > 0;
+  $("thanks-big").textContent = anyone ? t.thanksYes : t.thanksNo;
+  let txt = (anyone ? t.thanksYesTxt : t.thanksNoTxt).replace("{g}", anyone ? join(yes) : (shortName(g, state.lang) || typed));
+  if(anyone && no.length && ps.length > 1) txt += t.missOne.replace("{p}", join(no));
+  $("thanks-txt").textContent = txt;
+}
+
+/* ---------- submit ---------- */
+async function submit(){
+  const t = T[state.lang], g = state.guest; $("err").hidden = true;
+  const typedName = $("in-name").value.trim();
+  if(!g && !typedName){ $("err").textContent = t.needName; $("err").hidden = false; $("in-name").focus(); return; }
+  const ps = people(), a = state.answers.slice(0, ps.length);
+  const seats = a.filter(v => v===true).length;
+  const who = ps.map((p, i) => { const nm = p.unnamed ? (((state.pnames||{})[i]||"").trim() || p.label) : (g ? (g.people[i].first || p.label) : (i===0 ? typedName : p.label)); return `${nm}: ${a[i] ? "yes" : "no"}`; }).join("; ");
+  const payload = { id: g ? g.id : (token||"-"), name: g ? g.invite : typedName, attending: seats ? "Yes" : "No", seats: String(seats),
+    plusName: who, message: $("in-msg").value.trim(), lang: state.lang };
+  $("send").disabled = true; $("send").textContent = t.sending;
+  try{
+    if(!DEMO){
+      const fd = new FormData(); for(const k of Object.keys(CONFIG.entries)) if(CONFIG.entries[k]) fd.append(CONFIG.entries[k], payload[k] ?? "");
+      await fetch(`https://docs.google.com/forms/d/e/${CONFIG.formId}/formResponse`, { method:"POST", mode:"no-cors", body: fd });
+    } else { await new Promise(r=>setTimeout(r, 600)); }
+    state.sent = { attending: seats > 0, seats, answers: a };
+    try{ localStorage.setItem("rsvp:"+(token||"anon"), JSON.stringify({ ...state.sent, at: Date.now() })); }catch(e){}
+    showThanks(state.sent); $("thanks").scrollIntoView({behavior:"smooth", block:"center"});
+  }catch(e){ $("err").textContent = t.err; $("err").hidden = false; }
+  $("send").textContent = t.send; $("send").disabled = false;
+}
+
+/* ---------- "opened" ping: one silent row per device so the hosts know who has seen the invitation ---------- */
+async function pingOpened(){
+  const g = state.guest; if(!g || DEMO) return;
+  const key = "opened:" + g.id; try{ if(localStorage.getItem(key)) return; }catch(e){}
+  try{
+    const fd = new FormData(); const e = CONFIG.entries;
+    fd.append(e.id, g.id); fd.append(e.name, g.invite); fd.append(e.attending, "Opened"); fd.append(e.seats, ""); fd.append(e.plusName, ""); fd.append(e.message, ""); fd.append(e.lang, navigator.language || "");
+    await fetch(`https://docs.google.com/forms/d/e/${CONFIG.formId}/formResponse`, { method:"POST", mode:"no-cors", body: fd });
+    try{ localStorage.setItem(key, String(Date.now())); }catch(e){}
+  }catch(e){ /* best effort */ }
+}
+
+/* ---------- wiring ---------- */
+function setLang(lang){
+  state.lang = lang; render();
+  $("cover").hidden = true; $("inside").hidden = false; document.body.classList.add("in"); fitMonos(); requestAnimationFrame(fitMonos); setTimeout(fitMonos, 300); window.scrollTo({top:0, behavior:"instant"});
+  try{ localStorage.setItem("lang", lang); }catch(e){}
+}
+document.querySelectorAll(".lang").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+$("switch").addEventListener("click", () => { state.lang = state.lang==="en" ? "ar" : "en"; render(); window.scrollTo({top:0, behavior:"smooth"}); });
+$("send").addEventListener("click", submit);
+$("change").addEventListener("click", () => { state.sent = null; $("thanks").hidden = true; $("form").hidden = false; updateForm(); });
+
+(async () => {
+  state.guest = await loadGuest(); pingOpened();
+  try{ const prev = JSON.parse(localStorage.getItem("rsvp:"+(token||"anon"))||"null"); if(prev && Array.isArray(prev.answers)){ state.answers = prev.answers.map(v => (v===true||v===false) ? v : null); state.sent = { attending: prev.attending, seats: prev.seats, answers: prev.answers }; } }catch(e){}
+  const forced = params.get("lang"); if(forced==="en"||forced==="ar") setLang(forced);
+})();
+</script>
+
+</body>
+</html>
