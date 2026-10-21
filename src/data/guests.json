@@ -1,13 +1,18 @@
 [
  {
   "id": "moustafa-al-abiad",
-  "invite": "Moustafa Al Abiad",
+  "invite": "Moustafa Al Abiad & Dana El Oueini",
   "group": "Family",
   "people": [
    {
     "first": "Moustafa",
     "firstAr": "مصطفى",
     "gender": "M"
+   },
+   {
+    "first": "Dana",
+    "firstAr": "دانا",
+    "gender": ""
    }
   ],
   "open": 0
@@ -49,18 +54,18 @@
   "open": 0
  },
  {
-  "id": "sawsan-itani",
-  "invite": "Sawsan & Maher Itani",
+  "id": "maher-itani",
+  "invite": "Maher & Sawsan Itani",
   "group": "Family",
   "people": [
    {
-    "first": "Sawsan",
-    "firstAr": "سوسن",
-    "gender": "F"
-   },
-   {
     "first": "Maher",
     "firstAr": "ماهر",
+    "gender": "M"
+   },
+   {
+    "first": "Sawsan",
+    "firstAr": "سوسن",
     "gender": ""
    }
   ],
@@ -103,18 +108,18 @@
   "open": 0
  },
  {
-  "id": "leen-fleifel",
-  "invite": "Leen & Khodor Fleifel",
+  "id": "khodor-fleifel",
+  "invite": "Khodor & Leen Fleifel",
   "group": "Family",
   "people": [
    {
-    "first": "Leen",
-    "firstAr": "لين",
-    "gender": "F"
-   },
-   {
     "first": "Khodor",
     "firstAr": "خضر",
+    "gender": "M"
+   },
+   {
+    "first": "Leen",
+    "firstAr": "لين",
     "gender": ""
    }
   ],
@@ -494,18 +499,18 @@
   "open": 0
  },
  {
-  "id": "yasmina-atallah",
-  "invite": "Yasmina Atallah & Fayez",
+  "id": "fayez",
+  "invite": "Fayez & Yasmina Atallah",
   "group": "Friends",
   "people": [
    {
-    "first": "Yasmina",
-    "firstAr": "ياسمينا",
-    "gender": "F"
-   },
-   {
     "first": "Fayez",
     "firstAr": "فايز",
+    "gender": "M"
+   },
+   {
+    "first": "Yasmina",
+    "firstAr": "ياسمينا",
     "gender": ""
    }
   ],
@@ -551,6 +556,534 @@
     "first": "Jerome",
     "firstAr": "جيروم",
     "gender": "M"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "bassem-oueini",
+  "invite": "Bassem Oueini & Dania Medawar",
+  "group": "Family",
+  "people": [
+   {
+    "first": "Bassem",
+    "firstAr": "باسم",
+    "gender": "M"
+   },
+   {
+    "first": "Dania",
+    "firstAr": "دانيا",
+    "gender": ""
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "bilal-oueini",
+  "invite": "Bilal Oueini & Maysaa AbdelMalak",
+  "group": "Family",
+  "people": [
+   {
+    "first": "Bilal",
+    "firstAr": "بلال",
+    "gender": "M"
+   },
+   {
+    "first": "Maysaa",
+    "firstAr": "ميساء",
+    "gender": ""
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "omar-oueini",
+  "invite": "Omar Oueini & Nour Saleh",
+  "group": "Family",
+  "people": [
+   {
+    "first": "Omar",
+    "firstAr": "عمر",
+    "gender": "M"
+   },
+   {
+    "first": "Nour",
+    "firstAr": "نور",
+    "gender": ""
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "aida-kouwatly",
+  "invite": "Aida Kouwatly",
+  "group": "Family",
+  "people": [
+   {
+    "first": "Aida",
+    "firstAr": "عايدة",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "rashid-medawar",
+  "invite": "Rashid Medawar",
+  "group": "Family",
+  "people": [
+   {
+    "first": "Rashid",
+    "firstAr": "رشيد",
+    "gender": "M"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "omar-medawar",
+  "invite": "Omar Medawar",
+  "group": "Family",
+  "people": [
+   {
+    "first": "Omar",
+    "firstAr": "عمر",
+    "gender": "M"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "wafaa-medawar",
+  "invite": "Wafaa Medawar & Burhan Hashwe",
+  "group": "Family",
+  "people": [
+   {
+    "first": "Wafaa",
+    "firstAr": "وفاء",
+    "gender": "F"
+   },
+   {
+    "first": "Burhan",
+    "firstAr": "برهان",
+    "gender": ""
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "sirine-hashwe",
+  "invite": "Sirine Hashwe & Ali Kaakour",
+  "group": "Family",
+  "people": [
+   {
+    "first": "Sirine",
+    "firstAr": "سيرين",
+    "gender": "F"
+   },
+   {
+    "first": "Ali",
+    "firstAr": "علي",
+    "gender": ""
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "bassem-hashwe",
+  "invite": "Bassem Hashwe & Lynn Sinjaba",
+  "group": "Family",
+  "people": [
+   {
+    "first": "Bassem",
+    "firstAr": "باسم",
+    "gender": "M"
+   },
+   {
+    "first": "Lynn",
+    "firstAr": "لين",
+    "gender": ""
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "manal-hashwe",
+  "invite": "Manal Hashwe",
+  "group": "Family",
+  "people": [
+   {
+    "first": "Manal",
+    "firstAr": "منال",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "rima-oueini",
+  "invite": "Rima Oueini",
+  "group": "Family",
+  "people": [
+   {
+    "first": "Rima",
+    "firstAr": "ريما",
+    "gender": "F"
+   }
+  ],
+  "open": 1
+ },
+ {
+  "id": "hala-oueini",
+  "invite": "Hala Oueini",
+  "group": "Family",
+  "people": [
+   {
+    "first": "Hala",
+    "firstAr": "هلا",
+    "gender": "F"
+   }
+  ],
+  "open": 1
+ },
+ {
+  "id": "samer-oueini",
+  "invite": "Samer Oueini",
+  "group": "Family",
+  "people": [
+   {
+    "first": "Samer",
+    "firstAr": "سامر",
+    "gender": "M"
+   }
+  ],
+  "open": 1
+ },
+ {
+  "id": "abed-abdel-malak",
+  "invite": "Abed Abdel Malak",
+  "group": "Extended family",
+  "people": [
+   {
+    "first": "Abed",
+    "firstAr": "عبد",
+    "gender": "M"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "rene-saleh",
+  "invite": "Rene Saleh",
+  "group": "Family friends",
+  "people": [
+   {
+    "first": "Rene",
+    "firstAr": "رينيه",
+    "gender": "M"
+   }
+  ],
+  "open": 1
+ },
+ {
+  "id": "ahmad-abdel-malak",
+  "invite": "Ahmad Abdel Malak",
+  "group": "Extended family",
+  "people": [
+   {
+    "first": "Ahmad",
+    "firstAr": "أحمد",
+    "gender": "M"
+   }
+  ],
+  "open": 1
+ },
+ {
+  "id": "loulwa-ghaziri",
+  "invite": "Loulwa Ghaziri",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Loulwa",
+    "firstAr": "لولوة",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "maya-saab",
+  "invite": "Maya Saab",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Maya",
+    "firstAr": "مايا",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "nour-mougharbel",
+  "invite": "Nour Mougharbel",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Nour",
+    "firstAr": "نور",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "mia-hanbali",
+  "invite": "Mia Hanbali",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Mia",
+    "firstAr": "ميا",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "nour-soubra",
+  "invite": "Nour Soubra",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Nour",
+    "firstAr": "نور",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "taliah-tabbarah",
+  "invite": "Taliah Tabbarah & Mohammad Itani",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Taliah",
+    "firstAr": "تاليا",
+    "gender": "F"
+   },
+   {
+    "first": "Mohammad",
+    "firstAr": "محمد",
+    "gender": ""
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "haya-mahfouz",
+  "invite": "Haya Mahfouz & Jad Naji",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Haya",
+    "firstAr": "هيا",
+    "gender": "F"
+   },
+   {
+    "first": "Jad",
+    "firstAr": "جاد",
+    "gender": ""
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "amar-abbani",
+  "invite": "Amar Abbani & Ali Yahfoufi",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Amar",
+    "firstAr": "قمر",
+    "gender": "F"
+   },
+   {
+    "first": "Ali",
+    "firstAr": "علي",
+    "gender": ""
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "nour-rabah",
+  "invite": "Nour Rabah",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Nour",
+    "firstAr": "نور",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "razan-mansour",
+  "invite": "Razan Mansour",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Razan",
+    "firstAr": "رزان",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "saada-slim",
+  "invite": "Saada Slim",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Saada",
+    "firstAr": "سعادة",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "yara-muslimany",
+  "invite": "Yara Muslimany",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Yara",
+    "firstAr": "يارا",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "yara-ismael",
+  "invite": "Yara Ismael & Ali Najim",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Yara",
+    "firstAr": "يارا",
+    "gender": "F"
+   },
+   {
+    "first": "Ali",
+    "firstAr": "علي",
+    "gender": ""
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "moustafa-banbouk",
+  "invite": "Moustafa Banbouk & Lynn Shmaitilly",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Moustafa",
+    "firstAr": "مصطفى",
+    "gender": "M"
+   },
+   {
+    "first": "Lynn",
+    "firstAr": "لين",
+    "gender": ""
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "mohammad-bash",
+  "invite": "Mohammad Bash",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Mohammad",
+    "firstAr": "محمد",
+    "gender": "M"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "zeinab",
+  "invite": "Zeinab",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Zeinab",
+    "firstAr": "زينب",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "sara-kassem",
+  "invite": "Sara Kassem",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Sara",
+    "firstAr": "سارة",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "may-kanafani",
+  "invite": "May Kanafani & Ahmad Azhari",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "May",
+    "firstAr": "مي",
+    "gender": "F"
+   },
+   {
+    "first": "Ahmad",
+    "firstAr": "أحمد",
+    "gender": ""
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "zeina-mehio",
+  "invite": "Zeina Mehio",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Zeina",
+    "firstAr": "زينة",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "sara-moussa",
+  "invite": "Sara Moussa",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Sara",
+    "firstAr": "سارة",
+    "gender": "F"
    }
   ],
   "open": 0
