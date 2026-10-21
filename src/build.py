@@ -1,17 +1,32 @@
-"""Build index.html (the invitation) from src/page.html + src/data/guests.json + src/config.json.
-Run from anywhere:  python3 src/build.py
+"""Build index.html (the published page) from src/page.html + src/data/guests.json + src/config.json.
+
+Usage:  python3 src/build.py            → writes <repo>/index.html
+        python3 src/build.py --preview p.html   also writes the page body (no document skeleton, demo form)
+Paths are resolved from this file's location, so it can be run from any directory.
 """
-import json, os
-HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(HERE)
-page = open(os.path.join(HERE, 'page.html'), encoding='utf-8').read()
-guests = json.load(open(os.path.join(HERE, 'data', 'guests.json'), encoding='utf-8'))
-cfg = json.load(open(os.path.join(HERE, 'config.json'), encoding='utf-8'))
-body = page.replace('__GUESTS__', json.dumps(guests, ensure_ascii=False, separators=(',', ':')))
-if cfg.get('formId'):
-    body = body.replace('formId: "",', f'formId: "{cfg["formId"]}",', 1)
-head_end = body.index('</style>') + len('</style>')
+import json, os, sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+
+page = open(os.path.join(HERE, "page.html"), encoding="utf-8").read()
+guests = json.load(open(os.path.join(HERE, "data", "guests.json"), encoding="utf-8"))
+compact = json.dumps(guests, ensure_ascii=False, separators=(",", ":"))
+cfg_path = os.path.join(HERE, "config.json")
+cfg = json.load(open(cfg_path, encoding="utf-8")) if os.path.exists(cfg_path) else {}
+
+
+def apply(src, live):
+    out = src.replace("__GUESTS__", compact)
+    if live and cfg.get("formId"):
+        out = out.replace('formId: "",', f'formId: "{cfg["formId"]}",', 1)
+    return out
+
+
+body = apply(page, live=True)
+head_end = body.index("</style>") + len("</style>")
 head, rest = body[:head_end], body[head_end:]
-og = cfg.get('siteUrl', 'https://moustafaabiad.github.io').rstrip('/')
+og = cfg.get("siteUrl", "https://moustafaabiad.github.io").rstrip("/")
 doc = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
        '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n'
        '<meta name="robots" content="noindex,nofollow">\n'
@@ -23,5 +38,9 @@ doc = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
        '<link rel="icon" href="assets/favicon.png" type="image/png">\n'
        + head.replace('<meta name="claude:viewport-fit-sides" content="cover">\n', '') +
        '\n</head>\n<body>\n' + rest + '\n</body>\n</html>\n')
-open(os.path.join(ROOT, 'index.html'), 'w', encoding='utf-8').write(doc)
-print('index.html written:', len(doc), 'bytes; guests:', len(guests), '; form:', 'live' if cfg.get('formId') else 'demo')
+out_path = os.path.join(ROOT, "index.html")
+open(out_path, "w", encoding="utf-8").write(doc)
+if "--preview" in sys.argv:
+    p = sys.argv[sys.argv.index("--preview") + 1]
+    open(p, "w", encoding="utf-8").write(apply(page, live=False))
+print(f"index.html: {len(doc)} bytes, {len(guests)} invitations, form: {'live' if cfg.get('formId') else 'demo'}")
