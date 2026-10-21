@@ -292,7 +292,7 @@ footer .meta{font-family:var(--f-caps);font-size:.6rem;letter-spacing:.3em;text-
 <script>
 /* ===================== CONFIG (filled in at go-live) ===================== */
 const CONFIG = {
-  guestsCsv: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQlg5Wm0QzeyJ9S_AdVEdeKYhWQoW8ExZGOjCLPlCvF1OaC4o0cXx5hJzQymNHEypgL4brusa_5C_Nc/pub?gid=609249100&single=true&output=csv",   // the Guests tab, published to the web as CSV: edits in the sheet are live; the embedded copy below is the fallback
+  guestsCsv: "",               // live guest list (published CSV) — disabled: Workspace policy forces a Google sign-in for anonymous readers, so the embedded copy below is the source
   formId: "1FAIpQLSduwyvbTsNoVySYdxsCdnYQQKluvGW7exAPkFsHYv8grSSx_A",                  // set at go-live: the published form's responder id (…/forms/d/e/<formId>/formResponse)
   entries: { id:"entry.455962464", name:"entry.1358260306", attending:"entry.1275450610", seats:"entry.1623008452", plusName:"entry.620440869", message:"entry.2047381341", lang:"entry.1956189908" },
   rsvpBy: { en: "29 November 2026", ar: "٢٩ تشرين الثاني ٢٠٢٦" },
