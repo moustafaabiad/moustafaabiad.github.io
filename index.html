@@ -567,7 +567,9 @@ $("send").addEventListener("click", submit);
 $("change").addEventListener("click", () => { state.sent = null; $("thanks").hidden = true; $("form").hidden = false; updateForm(); });
 
 (async () => {
-  state.guest = await loadGuest(); pingOpened();
+  state.guest = await loadGuest();
+  if(params.has("reset")){ try{ localStorage.removeItem("opened:" + (state.guest && state.guest.id)); localStorage.removeItem("rsvp:"+(token||"anon")); }catch(e){} }   /* …&reset=1 → this device forgets it opened / replied (for testing) */
+  pingOpened();
   try{ const prev = JSON.parse(localStorage.getItem("rsvp:"+(token||"anon"))||"null"); if(prev && Array.isArray(prev.answers)){ state.answers = prev.answers.map(v => (v===true||v===false) ? v : null); state.sent = { attending: prev.attending, seats: prev.seats, answers: prev.answers }; } }catch(e){}
   const forced = params.get("lang"); if(forced==="en"||forced==="ar") setLang(forced);
 })();
