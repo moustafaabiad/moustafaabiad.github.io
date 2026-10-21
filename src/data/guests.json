@@ -535,6 +535,24 @@
   "open": 0
  },
  {
+  "id": "georges-azzi",
+  "invite": "Georges Azzi & Andrea Brecie",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Georges",
+    "firstAr": "جورج",
+    "gender": "M"
+   },
+   {
+    "first": "Andrea",
+    "firstAr": "اندريا",
+    "gender": ""
+   }
+  ],
+  "open": 0
+ },
+ {
   "id": "nelly-stavro",
   "invite": "Nelly Stavro",
   "group": "Friends",
