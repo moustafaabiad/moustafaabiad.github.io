@@ -126,18 +126,18 @@
   "open": 0
  },
  {
-  "id": "samar-dabbous",
-  "invite": "Samar & Bassel Dabbous",
+  "id": "bassel-dabbous",
+  "invite": "Bassel & Samar Dabbous",
   "group": "Family",
   "people": [
    {
-    "first": "Samar",
-    "firstAr": "سمر",
-    "gender": "F"
-   },
-   {
     "first": "Bassel",
     "firstAr": "باسل",
+    "gender": "M"
+   },
+   {
+    "first": "Samar",
+    "firstAr": "سمر",
     "gender": ""
    }
   ],
@@ -407,16 +407,21 @@
  },
  {
   "id": "omar-daouk",
-  "invite": "Omar Daouk",
+  "invite": "Omar Daouk & Talia Rakha",
   "group": "Friends",
   "people": [
    {
     "first": "Omar",
     "firstAr": "عمر",
     "gender": "M"
+   },
+   {
+    "first": "Talia",
+    "firstAr": "تالية",
+    "gender": ""
    }
   ],
-  "open": 1
+  "open": 0
  },
  {
   "id": "jad-gebran",
@@ -530,50 +535,6 @@
     "first": "Dana",
     "firstAr": "دانا",
     "gender": ""
-   }
-  ],
-  "open": 0
- },
- {
-  "id": "georges-azzi",
-  "invite": "Georges Azzi & Andrea Brecie",
-  "group": "Friends",
-  "people": [
-   {
-    "first": "Georges",
-    "firstAr": "جورج",
-    "gender": "M"
-   },
-   {
-    "first": "Andrea",
-    "firstAr": "اندريا",
-    "gender": ""
-   }
-  ],
-  "open": 0
- },
- {
-  "id": "nelly-stavro",
-  "invite": "Nelly Stavro",
-  "group": "Friends",
-  "people": [
-   {
-    "first": "Nelly",
-    "firstAr": "نيللي",
-    "gender": "F"
-   }
-  ],
-  "open": 0
- },
- {
-  "id": "jerome-kaikati",
-  "invite": "Jerome Kaikati",
-  "group": "Friends",
-  "people": [
-   {
-    "first": "Jerome",
-    "firstAr": "جيروم",
-    "gender": "M"
    }
   ],
   "open": 0
@@ -802,7 +763,7 @@
    },
    {
     "first": "Malak",
-    "firstAr": "",
+    "firstAr": "ملاك",
     "gender": ""
    }
   ],
@@ -1107,6 +1068,19 @@
     "first": "Haya",
     "firstAr": "هيا",
     "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "abdallah-saleh",
+  "invite": "Abdallah Saleh",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Abdallah",
+    "firstAr": "عبد الله",
+    "gender": "M"
    }
   ],
   "open": 0
