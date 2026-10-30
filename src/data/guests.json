@@ -540,6 +540,45 @@
   "open": 0
  },
  {
+  "id": "nelly-stavro",
+  "invite": "Nelly Stavro",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Nelly",
+    "firstAr": "نيللي",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "jerome-kaikati",
+  "invite": "Jerome Kaikati",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Jerome",
+    "firstAr": "جيروم",
+    "gender": "M"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "mohammad-fleifel",
+  "invite": "Mohammad Fleifel",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Mohammad",
+    "firstAr": "محمد",
+    "gender": "M"
+   }
+  ],
+  "open": 0
+ },
+ {
   "id": "bassem-oueini",
   "invite": "Bassem Oueini & Dania Medawar",
   "group": "Family",
