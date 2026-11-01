@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Moustafa & Dana//Engagement//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:engagement-moustafa-dana-20261229@abiad
+DTSTAMP:20261021T000000Z
+DTSTART:20261229T173000Z
+DTEND:20261229T220000Z
+SUMMARY:Engagement of Moustafa & Dana
+LOCATION:Kasr Fakhreddine\, Saifi\, Beirut
+DESCRIPTION:Tuesday 29 December 2026 at 7:30 PM\, Kasr Fakhreddine (rooftop
+  salon)\, Saifi\, Beirut. Formal attire.
+URL:https://moustafaabiad.github.io/
+END:VEVENT
+END:VCALENDAR

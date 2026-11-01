@@ -413,7 +413,6 @@ function shortName(g, lang){
 }
 
 /* ---------- calendar ---------- */
-const ICS = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Moustafa & Dana//Engagement//EN","BEGIN:VEVENT","UID:engagement-moustafa-dana-20261229@abiad","DTSTAMP:20261021T000000Z","DTSTART:20261229T173000Z","DTEND:20261229T220000Z","SUMMARY:Engagement of Moustafa & Dana","LOCATION:Kasr Fakhreddine\\, Saifi\\, Beirut","DESCRIPTION:Tuesday 29 December 2026 at 7:30 PM\\, Kasr Fakhreddine (rooftop salon)\\, Saifi\\, Beirut. Formal attire.","END:VEVENT","END:VCALENDAR"].join("\r\n");
 const GCAL = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + encodeURIComponent("Engagement of Moustafa & Dana") + "&dates=20261229T173000Z/20261229T220000Z&location=" + encodeURIComponent("Kasr Fakhreddine, Saifi, Beirut") + "&details=" + encodeURIComponent("Tuesday 29 December 2026 at 7:30 PM, rooftop salon. Formal attire.");
 
 /* ---------- keystone monogram placement ---------- */
@@ -455,8 +454,10 @@ function render(){
   $("f-date").textContent = t.date; $("f-time").textContent = t.time; $("f-venue").textContent = t.venue; $("f-venue2").textContent = t.venue2; $("f-dress").textContent = t.dress;
   $("l-maps").textContent = t.maps; $("l-cal").textContent = t.cal;
   const isApple = /iPhone|iPad|Macintosh/.test(navigator.userAgent);
-  $("l-cal").href = isApple ? "data:text/calendar;charset=utf-8," + encodeURIComponent(ICS) : GCAL;
-  if(isApple) $("l-cal").setAttribute("download","Moustafa-and-Dana.ics"); else $("l-cal").removeAttribute("download");
+  const cal = $("l-cal");                                            // Apple: a real .ics file served by the site opens Calendar's "Add event" sheet
+  cal.href = isApple ? "assets/engagement.ics" : GCAL;              // (data: links are blocked in Safari and in WhatsApp/Instagram in-app browsers)
+  if(isApple){ cal.removeAttribute("target"); } else { cal.setAttribute("target","_blank"); }
+  cal.removeAttribute("download");
   $("rsvp-h").textContent = t.rsvp; $("rsvp-by").textContent = t.by.replace("{d}", CONFIG.rsvpBy[lang]);
   const nSeats = g ? g.people.length + (g.open||0) : 0;
   $("rsvp-seats").textContent = t.seatsN.replace("{n}", t.nums[nSeats] || String(nSeats)); $("rsvp-seats").hidden = nSeats < 2;
