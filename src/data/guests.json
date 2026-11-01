@@ -579,6 +579,120 @@
   "open": 0
  },
  {
+  "id": "dania-borne",
+  "invite": "Dania Borne",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Dania",
+    "firstAr": "دانيا",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "celine-borne",
+  "invite": "Celine Borne",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Celine",
+    "firstAr": "سيلين",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "jerome-borne",
+  "invite": "Jerome Borne",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Jerome",
+    "firstAr": "جيروم",
+    "gender": "M"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "karim-farchoukh",
+  "invite": "Karim & Djumana Farchoukh",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Karim",
+    "firstAr": "كريم",
+    "gender": "M"
+   },
+   {
+    "first": "Djumana",
+    "firstAr": "جمانة",
+    "gender": ""
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "jolina-farchoukh",
+  "invite": "Jolina Farchoukh",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Jolina",
+    "firstAr": "جولينا",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "youssef-farchoukh",
+  "invite": "Youssef Farchoukh",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Youssef",
+    "firstAr": "يوسف",
+    "gender": "M"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "foutoun-farchoukh",
+  "invite": "Foutoun Farchoukh",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Foutoun",
+    "firstAr": "فتون",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "youssef-farchoukh-2",
+  "invite": "Youssef & Doris Farchoukh",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Youssef",
+    "firstAr": "يوسف",
+    "gender": "M"
+   },
+   {
+    "first": "Doris",
+    "firstAr": "دوريس",
+    "gender": ""
+   }
+  ],
+  "open": 0
+ },
+ {
   "id": "bassem-oueini",
   "invite": "Bassem Oueini & Dania Medawar",
   "group": "Family",
