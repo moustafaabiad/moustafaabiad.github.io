@@ -963,13 +963,18 @@
  },
  {
   "id": "mia-hanbali",
-  "invite": "Mia Hanbali",
+  "invite": "Mia Hanbali & Bashir Banbouk",
   "group": "Friends",
   "people": [
    {
     "first": "Mia",
     "firstAr": "ميا",
     "gender": "F"
+   },
+   {
+    "first": "Bashir",
+    "firstAr": "",
+    "gender": ""
    }
   ],
   "open": 0
