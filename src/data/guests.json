@@ -581,7 +581,7 @@
  {
   "id": "dania-borne",
   "invite": "Dania Borne",
-  "group": "Friends",
+  "group": "Family",
   "people": [
    {
     "first": "Dania",
@@ -594,7 +594,7 @@
  {
   "id": "celine-borne",
   "invite": "Celine Borne",
-  "group": "Friends",
+  "group": "Family",
   "people": [
    {
     "first": "Celine",
@@ -607,7 +607,7 @@
  {
   "id": "jerome-borne",
   "invite": "Jerome Borne",
-  "group": "Friends",
+  "group": "Family",
   "people": [
    {
     "first": "Jerome",
@@ -620,7 +620,7 @@
  {
   "id": "karim-farchoukh",
   "invite": "Karim & Djumana Farchoukh",
-  "group": "Friends",
+  "group": "Family",
   "people": [
    {
     "first": "Karim",
@@ -638,7 +638,7 @@
  {
   "id": "jolina-farchoukh",
   "invite": "Jolina Farchoukh",
-  "group": "Friends",
+  "group": "Family",
   "people": [
    {
     "first": "Jolina",
@@ -651,7 +651,7 @@
  {
   "id": "youssef-farchoukh",
   "invite": "Youssef Farchoukh",
-  "group": "Friends",
+  "group": "Family",
   "people": [
    {
     "first": "Youssef",
@@ -664,7 +664,7 @@
  {
   "id": "foutoun-farchoukh",
   "invite": "Foutoun Farchoukh",
-  "group": "Friends",
+  "group": "Family",
   "people": [
    {
     "first": "Foutoun",
@@ -677,7 +677,7 @@
  {
   "id": "youssef-farchoukh-2",
   "invite": "Youssef & Doris Farchoukh",
-  "group": "Friends",
+  "group": "Family",
   "people": [
    {
     "first": "Youssef",
@@ -688,6 +688,50 @@
     "first": "Doris",
     "firstAr": "دوريس",
     "gender": ""
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "saad-tabbara",
+  "invite": "Saad & Nancy Tabbara",
+  "group": "Family",
+  "people": [
+   {
+    "first": "Saad",
+    "firstAr": "سعد",
+    "gender": "M"
+   },
+   {
+    "first": "Nancy",
+    "firstAr": "نانسي",
+    "gender": ""
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "nadim-tabbara",
+  "invite": "Nadim Tabbara",
+  "group": "Family",
+  "people": [
+   {
+    "first": "Nadim",
+    "firstAr": "نديم",
+    "gender": "M"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "cyma-tabbara",
+  "invite": "Cyma Tabbara",
+  "group": "Family",
+  "people": [
+   {
+    "first": "Cyma",
+    "firstAr": "سيما",
+    "gender": "F"
    }
   ],
   "open": 0
