@@ -737,6 +737,24 @@
   "open": 0
  },
  {
+  "id": "georges-azzi",
+  "invite": "Georges & Andrea Azzi",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Georges",
+    "firstAr": "جورج",
+    "gender": "M"
+   },
+   {
+    "first": "Andrea",
+    "firstAr": "أندريا",
+    "gender": ""
+   }
+  ],
+  "open": 0
+ },
+ {
   "id": "bassem-oueini",
   "invite": "Bassem Oueini & Dania Medawar",
   "group": "Family",
