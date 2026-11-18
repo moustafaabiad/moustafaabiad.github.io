@@ -755,6 +755,19 @@
   "open": 0
  },
  {
+  "id": "bilal-itani",
+  "invite": "Bilal Itani",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Bilal",
+    "firstAr": "بلال",
+    "gender": "M"
+   }
+  ],
+  "open": 0
+ },
+ {
   "id": "bassem-oueini",
   "invite": "Bassem Oueini & Dania Medawar",
   "group": "Family",
