@@ -20,7 +20,8 @@ from html.parser import HTMLParser
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT_DEFAULT = os.path.join(HERE, "data", "guests.json")
 SHEET_ID = "1ruCmz4hsgPHLVRd02krjs9Y7AHy-BTTqxnCxp9N0euQ"          # "Invitation - guest list (live)"
-TOOL_RESULTS = "/root/.claude/projects/**/tool-results/mcp-Google_Drive-download_file_content-*.txt"
+TOOL_RESULTS = ("/root/.claude/projects/**/tool-results/mcp-Google_Drive-download_file_content-*.txt",
+                "/root/.claude/projects/**/tool-results/mcp-Google_Drive-blob-*.zip")
 REQUIRED = ("id", "guest", "first name (en)")
 SHRINK_GUARD = 0.7      # refuse (without --force) if the list drops below 70 % of the previous count
 
@@ -99,7 +100,7 @@ def rows_from_bytes(data, label):
 def load_rows(path):
     """→ (rows, description).  Handles the harness-saved JSON wrapper around a Drive export."""
     if path is None:
-        found = sorted(glob.glob(TOOL_RESULTS, recursive=True), key=os.path.getmtime)
+        found = sorted((f for pat in TOOL_RESULTS for f in glob.glob(pat, recursive=True)), key=os.path.getmtime)
         if not found:
             raise SystemExit("error: no Drive export found; pass the exported file as argument")
         path = found[-1]
