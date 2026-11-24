@@ -768,19 +768,6 @@
   "open": 0
  },
  {
-  "id": "labwa-itani",
-  "invite": "Labwa Itani",
-  "group": "Family",
-  "people": [
-   {
-    "first": "Labwa",
-    "firstAr": "لبوة",
-    "gender": "F"
-   }
-  ],
-  "open": 0
- },
- {
   "id": "paris-ahmad",
   "invite": "Paris Ahmad",
   "group": "Friends",
@@ -1000,6 +987,19 @@
    {
     "first": "Samer",
     "firstAr": "سامر",
+    "gender": "M"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "saad-oueini",
+  "invite": "Saad Oueini",
+  "group": "Family",
+  "people": [
+   {
+    "first": "Saad",
+    "firstAr": "سعد",
     "gender": "M"
    }
   ],
