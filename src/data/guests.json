@@ -768,6 +768,32 @@
   "open": 0
  },
  {
+  "id": "labwa-itani",
+  "invite": "Labwa Itani",
+  "group": "Family",
+  "people": [
+   {
+    "first": "Labwa",
+    "firstAr": "لبوة",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "paris-ahmad",
+  "invite": "Paris Ahmad",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Paris",
+    "firstAr": "باريس",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
   "id": "bassem-oueini",
   "invite": "Bassem Oueini & Dania Medawar",
   "group": "Family",
