@@ -781,6 +781,32 @@
   "open": 0
  },
  {
+  "id": "tamara-doumiaty",
+  "invite": "Tamara Doumiaty",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Tamara",
+    "firstAr": "تمارا",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "arya-haddad",
+  "invite": "Arya Haddad",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Arya",
+    "firstAr": "آريا",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
   "id": "bassem-oueini",
   "invite": "Bassem Oueini & Dania Medawar",
   "group": "Family",
