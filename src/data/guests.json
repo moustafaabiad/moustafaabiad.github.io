@@ -1369,5 +1369,23 @@
    }
   ],
   "open": 0
+ },
+ {
+  "id": "mahmoud-habli",
+  "invite": "Mahmoud & Riwa Habli",
+  "group": "Extended family",
+  "people": [
+   {
+    "first": "Mahmoud",
+    "firstAr": "محمود",
+    "gender": "M"
+   },
+   {
+    "first": "Riwa",
+    "firstAr": "روى",
+    "gender": ""
+   }
+  ],
+  "open": 0
  }
 ]
