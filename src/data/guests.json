@@ -807,6 +807,37 @@
   "open": 0
  },
  {
+  "id": "nadim-hachem",
+  "invite": "Nadim Hachem & Jovana",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Nadim",
+    "firstAr": "نديم",
+    "gender": "M"
+   },
+   {
+    "first": "Jovana",
+    "firstAr": "جوفانا",
+    "gender": ""
+   }
+  ],
+  "open": 0
+ },
+ {
+  "id": "labwa-itani",
+  "invite": "Labwa Itani",
+  "group": "Family",
+  "people": [
+   {
+    "first": "Labwa",
+    "firstAr": "لبوة",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
   "id": "bassem-oueini",
   "invite": "Bassem Oueini & Dania Medawar",
   "group": "Family",
