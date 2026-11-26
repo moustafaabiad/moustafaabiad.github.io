@@ -838,6 +838,19 @@
   "open": 0
  },
  {
+  "id": "sabine-maatouk",
+  "invite": "Sabine Maatouk",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Sabine",
+    "firstAr": "سابين",
+    "gender": "F"
+   }
+  ],
+  "open": 0
+ },
+ {
   "id": "bassem-oueini",
   "invite": "Bassem Oueini & Dania Medawar",
   "group": "Family",
