@@ -1431,5 +1431,23 @@
    }
   ],
   "open": 0
+ },
+ {
+  "id": "ahmad-amara",
+  "invite": "Ahmad & Rayan Amara",
+  "group": "Friends",
+  "people": [
+   {
+    "first": "Ahmad",
+    "firstAr": "",
+    "gender": "M"
+   },
+   {
+    "first": "Rayan",
+    "firstAr": "",
+    "gender": ""
+   }
+  ],
+  "open": 0
  }
 ]
